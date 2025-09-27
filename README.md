@@ -29,6 +29,7 @@ Each notebook includes:
 
 | Notebook | Main Focus | IB Outcomes | Book Chapter |
 |----------|-------------|-------------|---------------|
+| **NB0** | Getting Started (Cheat sheet) | B2.1.1 | n.a. |
 | **NB1** | Sequential Programs (Card game) | B2.3.1 | HFP Ch. 0 |
 | **NB2** | Variables (types, scope, global vs local) | B2.1.1 | HFP Ch. 0–1 |
 | **NB3** | Strings & Substrings | B2.1.2 | HFP Ch. 1 |
@@ -74,5 +75,3 @@ Open an issue or pull request to add examples, propose alignment to other books,
 *This notebook series is being developed and curated collaboratively as part of an effort to make Python teaching in the IB context more engaging, meaningful, and aligned with the assessment objectives.*
 
 ---
-
-Let’s make programming feel purposeful for our students — not just code, but code that connects to real IB success 🚀
