@@ -1,3 +1,5 @@
+# @Author - Leonard
+
 import random
 import time
 
