@@ -1,0 +1,88 @@
+---
+title: "Swimmer's Data Report"
+format: html
+engine: python
+---
+```{python}
+#| echo: false
+import datetime
+
+report_date = datetime.datetime.now().strftime("%A, %d %B %Y")
+```
+
+### Report Generated: `{python} report_date`
+
+```{python}
+#| echo: false
+filename = "Hannah-13-100m-Back.txt"
+folder = "../../swimdata/"
+filepath = folder + filename
+
+with open(filepath) as file:
+    lines = file.readlines()
+
+name, age, distance, stroke = filename.replace(".txt", "").split("-")
+```
+
+**Name (Age):** `{python} name` (`{python} age`)<br/>
+**Distance:** `{python} distance`<br/>
+**Stroke:** `{python} stroke`<br/>
+
+
+```{python}
+#| echo: false
+import pandas as pd
+
+times = lines[0].strip().split(",")
+
+converted_times = []
+for time in times:
+    minutes, rest = time.split(":")
+    seconds, hundreths = rest.split(".")
+    converted = (int(minutes) * 60 * 100) + (int(seconds) * 100) + int((hundreths))
+    converted_times.append(converted)
+
+rows = []
+attempts = []
+for i, time in enumerate(times, 1):
+    attempts.append(i)
+    rows.append({"Attempt": i, "Time": time, "Converted": converted_times[i-1]})
+df = pd.DataFrame(rows)
+df.index = [""] * len(df) # hide the default index
+df
+```
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+plot_df = pd.DataFrame({
+    "Attempt": attempts,
+    "Converted": converted_times,
+    "Time_str": times
+})
+
+plt.figure(figsize=(6, 4))
+plt.bar(range(1, len(converted_times)+1), converted_times, color="skyblue")
+
+# Add original mm:ss.ss as labels above bars
+for i, (sec, tstr) in enumerate(zip(converted_times, times), 1):
+    plt.text(i, sec + 0.2, tstr, ha='center', va='bottom')
+
+plt.xlabel("Attempt")
+plt.ylabel("Time (cs)")
+plt.title("Swimmer Times")
+plt.xticks(range(1, len(converted_times)+1))
+plt.show()
+```
+
+```{python}
+#| echo: false
+average_time_cs = sum(converted_times) / len(converted_times)
+minutes = int(average_time_cs // 6000)
+seconds = int((average_time_cs % 6000) // 100)
+hundredths = int(average_time_cs % 100)
+average_time_str = f"{minutes}:{seconds:02}.{hundredths:02}"
+```
+
+**Average Time:** `{python} average_time_str`<br/>
