@@ -34,7 +34,8 @@ Each notebook includes:
 | **NB2** | Variables (types, scope, global vs local) | B2.1.1 | HFP Ch. 0–1 |
 | **NB3** | Strings & Substrings | B2.1.2 | HFP Ch. 1 |
 | **NB4** | Loops & Debugging | B2.3.3, B2.1.4 | HFP Ch. 2 |
-| **NB5** | Selection + Debug (coming soon) | B2.3.2, B2.1.4 | HFP Ch. 2–3 |
+| **NB5** | Lists | B2.1.3, B2.2.2 | HFP Ch. 2 |
+| **NB7** | Functions + Modules | B2.3.4 | HFP Ch. 3 |
 
 *More notebooks will continue into file handling, functions, static vs dynamic data structures, searching/sorting, etc.*
 
