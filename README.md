@@ -54,6 +54,25 @@ This makes it easier for students to connect classroom coding practice with thei
 
 ---
 
+## 🧩 Learning Progression (From Guided to Independent)
+
+This repository is designed around a gradual release of responsibility:
+
+#### 1. Guided Learning (Notebooks)
+Students are introduced to programming constructs through structured examples, scaffolded tasks, and IB-aligned prompts.
+The focus is on understanding syntax, tracing code, and applying core concepts in controlled contexts.
+
+#### 2. Independent Application (Student Examples)
+Students complete open-ended tasks where they are encouraged to define their own problems, approaches, and solutions.
+These artefacts demonstrate increasing independence in problem decomposition, design decisions, and implementation.
+
+#### 3. Extended Problem Solving (IA Preparation Tasks)
+Students apply their skills to larger, self-defined problems, requiring full ownership of design, development, and evaluation.
+
+This progression ensures that students move beyond guided exercises toward independent computational problem solving, as required in IB Computer Science Theme B.
+
+---
+
 ## ✅ Status & How to Use
 
 This project is in active development. Notebooks are numbered and can be used week-by-week in a term. Teachers can:
